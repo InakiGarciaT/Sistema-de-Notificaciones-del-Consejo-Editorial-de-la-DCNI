@@ -1,0 +1,156 @@
+@property --border-transform {
+  syntax: "<transform-function>";
+  inherits: true;
+  initial-value: translateY(-100px);
+}
+
+@keyframes border-disappear {
+  0% {
+    --border-transform: translateY(0px);
+    opacity: 1;
+  }
+
+  100% {
+    --border-transform: translateY(500px);
+    opacity: 0;
+  }
+}
+
+.border-animation {
+  transform: var(--border-transform);
+  animation: border-disappear 1.5s forwards;
+}
+
+@property --form-transform {
+  syntax: "<transform-function>";
+  inherits: true;
+  initial-value: scaleY(0);
+}
+
+@keyframes form-appear {
+  0% {
+    --form-transform: scaleY(0);
+  }
+
+  100% {
+    --form-transform: scaleY(1);
+  }
+}
+
+.form-animation {
+  transform-origin: top;
+  transform: var(--form-transform);
+  animation: form-appear 1.5s forwards;
+}
+
+@property --li-transform {
+  syntax: "<transform-function>";
+  inherits: true;
+  initial-value: scaleX(0);
+}
+
+@keyframes li-appear {
+  0% {
+    --li-transform: scaleX(0);
+  }
+
+  100% {
+    --li-transform: scaleX(1);
+  }
+}
+
+.li-animation {
+  transform-origin: left;
+  transform: var(--li-transform);
+  animation: li-appear 0.6s forwards;
+}
+
+@property --error-transform {
+  syntax: "<transform-function>";
+  inherits: true;
+  initial-value: translateX(-0px);
+}
+
+@keyframes error-movent {
+  0% {
+    --error-transform: translateX(0px);
+    border-color:#4A4A4A
+  }
+
+  10% {
+    --error-transform: translateX(2px);
+  }
+
+  20% {
+    --error-transform: translateX(-2px);
+  }
+
+  20% {
+    --error-transform: translateX(2px);
+  }
+
+  40% {
+    --error-transform: translateX(-2px);
+  }
+
+  50% {
+    --error-transform: translateX(2px);
+  }
+
+  60% {
+    --error-transform: translateX(-2px);
+  }
+
+  70% {
+    --error-transform: translateX(2px);
+  }
+
+  80% {
+    --error-transform: translateX(-2px);
+  }
+
+  90% {
+    --error-transform: translateX(2px);
+  }
+
+  100% {
+    --error-transform: translateX(0px);
+    border-color: #A14B4B;
+  }
+}
+
+.error-animation {
+  transform-origin: center;
+  transform: var(--error-transform);
+  animation: error-movent 1s forwards;
+}
+
+@property --email-transform {
+  syntax: "<transform-function>";
+  inherits: true;
+  initial-value: scaleX(0);
+}
+
+@keyframes email-appear {
+  0% {
+    --email-transform: scaleX(0);
+  }
+
+  25% {
+    --email-transform: scaleX(1);
+  }
+
+  90% {
+    --email-transform: scaleX(1);
+  }
+
+  100% {
+    --email-transform: scaleX(0);
+  }
+}
+
+.email-animation {
+  transform-origin: center;
+  transform: var(--email-transform);
+  animation: email-appear 12s forwards;
+}
