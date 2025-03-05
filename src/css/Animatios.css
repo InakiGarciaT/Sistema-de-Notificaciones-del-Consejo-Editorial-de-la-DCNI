@@ -18,7 +18,7 @@
 
 .border-animation {
   transform: var(--border-transform);
-  animation: border-disappear 1.5s forwards;
+  animation: border-disappear 1s forwards;
 }
 
 @property --form-transform {
@@ -40,7 +40,7 @@
 .form-animation {
   transform-origin: top;
   transform: var(--form-transform);
-  animation: form-appear 1.5s forwards;
+  animation: form-appear 1s forwards;
 }
 
 @property --li-transform {
@@ -136,7 +136,7 @@
     --email-transform: scaleX(0);
   }
 
-  25% {
+  15% {
     --email-transform: scaleX(1);
   }
 
@@ -152,5 +152,5 @@
 .email-animation {
   transform-origin: center;
   transform: var(--email-transform);
-  animation: email-appear 12s forwards;
+  animation: email-appear 9s forwards;
 }

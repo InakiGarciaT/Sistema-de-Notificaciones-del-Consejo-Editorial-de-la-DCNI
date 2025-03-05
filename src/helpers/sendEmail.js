@@ -40,5 +40,5 @@ export async function sendEmail({ workId, status: [ setStatus ] }) {
       status: 0,
       message: '',
     });
-  }, 12000);
+  }, 9000);
 }
